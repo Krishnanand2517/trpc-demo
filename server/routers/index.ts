@@ -1,4 +1,5 @@
 import { t } from "../trpc";
+import { userRouter } from "./users";
 
 export const appRouter = t.router({
   sayHi: t.procedure.query(() => {
@@ -15,4 +16,5 @@ export const appRouter = t.router({
 
       return true;
     }),
+  users: userRouter,
 });
