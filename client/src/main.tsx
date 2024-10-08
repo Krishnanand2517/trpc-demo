@@ -23,8 +23,14 @@ async function main() {
   const result2 = await client.logToServer.mutate("Hi from client");
   console.log(result2);
 
-  const result3 = await client.users.getUser.query();
+  const result3 = await client.users.getUser.query({ userId: "23" });
   console.log(result3);
+
+  const result4 = await client.users.updateUser.mutate({
+    userId: "23",
+    name: "Krish",
+  });
+  console.log(result4);
 }
 
 main();
