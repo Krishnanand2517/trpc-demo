@@ -31,6 +31,9 @@ async function main() {
     name: "Krish",
   });
   console.log(result4);
+
+  const result5 = await client.secretData.query();
+  console.log(result5);
 }
 
 main();
